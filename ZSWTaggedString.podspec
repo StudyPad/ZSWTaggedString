@@ -21,8 +21,9 @@ Pod::Spec.new do |s|
   s.default_subspecs = 'Core'
   s.pod_target_xcconfig = { 
     'APPLICATION_EXTENSION_API_ONLY' => 'YES',
-    'ARCHS' => 'arm64',
-    'VALID_ARCHS' => 'arm64'
+    'ARCHS[sdk=iphoneos*]' => 'arm64',
+    'ARCHS[sdk=iphonesimulator*]' => 'x86_64',
+    'VALID_ARCHS' => 'arm64 x86_64'
   }
   s.module_map = 'ZSWTaggedString/Classes/ZSWTaggedString.modulemap'
   s.swift_version = '5.0'
