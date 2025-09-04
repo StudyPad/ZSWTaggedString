@@ -19,7 +19,11 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = '9.0'
 
   s.default_subspecs = 'Core'
-  s.pod_target_xcconfig = { 'APPLICATION_EXTENSION_API_ONLY' => 'YES' }
+  s.pod_target_xcconfig = { 
+    'APPLICATION_EXTENSION_API_ONLY' => 'YES',
+    'ARCHS' => 'arm64',
+    'VALID_ARCHS' => 'arm64'
+  }
   s.module_map = 'ZSWTaggedString/Classes/ZSWTaggedString.modulemap'
   s.swift_version = '5.0'
 
