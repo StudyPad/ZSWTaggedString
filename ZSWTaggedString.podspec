@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig = { 
     'APPLICATION_EXTENSION_API_ONLY' => 'YES',
     'SDKROOT' => 'iphoneos',
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
+    'VALID_ARCHS' => 'arm64',
     'ONLY_ACTIVE_ARCH' => 'NO'
   }
   s.module_map = 'ZSWTaggedString/Classes/ZSWTaggedString.modulemap'
