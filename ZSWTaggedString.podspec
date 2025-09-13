@@ -21,9 +21,8 @@ Pod::Spec.new do |s|
   s.default_subspecs = 'Core'
   s.pod_target_xcconfig = { 
     'APPLICATION_EXTENSION_API_ONLY' => 'YES',
-    'SDKROOT' => 'iphoneos',
-    'VALID_ARCHS' => 'arm64',
-    'ONLY_ACTIVE_ARCH' => 'NO'
+    'VALID_ARCHS[sdk=iphonesimulator*]' => 'arm64',
+    'ARCHS[sdk=iphonesimulator*]' => 'arm64'
   }
   s.module_map = 'ZSWTaggedString/Classes/ZSWTaggedString.modulemap'
   s.swift_version = '5.0'
@@ -39,5 +38,9 @@ Pod::Spec.new do |s|
 
     swift.dependency 'ZSWTaggedString/Core'
     swift.source_files = 'ZSWTaggedString/Classes/**/*.swift', 'ZSWTaggedString/Private/**/*.swift'
+    swift.pod_target_xcconfig = {
+      'VALID_ARCHS[sdk=iphonesimulator*]' => 'arm64',
+      'ARCHS[sdk=iphonesimulator*]' => 'arm64'
+    }
   end
 end
