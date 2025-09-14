@@ -9,12 +9,12 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/zacwest/ZSWTaggedString"
   s.license          = 'MIT'
   s.author           = { "Zachary West" => "zacwest@gmail.com" }
-  s.source           = { :git => "https://github.com/zacwest/ZSWTaggedString.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/StudyPad/ZSWTaggedString.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/zacwest'
 
   s.requires_arc = true
 
-  s.ios.deployment_target = '7.0'
+  s.ios.deployment_target = '13.0'
   s.watchos.deployment_target = '2.0'
   s.tvos.deployment_target = '9.0'
 
